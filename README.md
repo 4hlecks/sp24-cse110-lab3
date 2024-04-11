@@ -1,4 +1,7 @@
 # Lab 2 - Starter
+## URL
+https://4hlecks.github.io/CSE-110-Lab-2/
+
 ## HTML Checklist
 - [X] title
 - [X] meta

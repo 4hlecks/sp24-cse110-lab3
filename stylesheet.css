@@ -1,0 +1,123 @@
+body {
+    --brand-color: rgb(240, 245, 247);
+
+    /* entire webpage background color */
+    background-color: var(--brand-color,white);
+
+    /* margin short hand notation */
+    margin: 5vh 5vh 5vh 5vh;
+  }
+
+/* paragraph text */
+p {
+    color: black;
+    font-size: 1rem;
+
+    /* padding long hand notation */
+    padding-top: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 1rem;
+}
+
+/* subheader */
+h2 {
+    font-size: 1cm;
+
+}
+
+/* subsubheader */
+h3 {
+    font-size: 5mm;
+}
+
+.block {
+    /* padding short hand notation */
+    padding: 1rem 1rem 1rem 1rem;
+    border-style: dotted;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 5px;
+    display: block;
+    height: auto;
+    width: 15rem;
+    max-width: 25rem;
+    min-width: 15rem;
+    position: static;
+}
+
+.block-2 {
+    /* margin long hand notation */
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.block-3 {
+    position: relative;
+    top: 0rem; left: 5rem;
+}
+
+h1:hover {
+    color: red;
+}
+
+input:required {
+    border-color: red;
+    border-width: 3px;
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
+    column-gap: 2rem;
+}
+
+/* Small screens like phones */
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
+
+/* Medium screens like tablets and laptops */
+@media (min-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}

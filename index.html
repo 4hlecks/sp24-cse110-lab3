@@ -3,17 +3,29 @@
     <head>
         <meta name="description" content="Website used for tracking meeting minutes.">
         <title>Meeting Minutes Tracker</title>
-        <link rel="icon" href="/media/star.png">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto">
+        <link rel="stylesheet" href="stylesheet.css">
+        <style>
+            h1 {
+                color: rgb(51, 52, 53);
+                text-align: center;
+                text-decoration: underline;
+            }
+            body {
+                font-family: 'Roboto', serif;
+            }
+        </style>
     </head>
 
     <!-- Title -->
     <header>
-        <div>
+        <div class="block-2">
             <h1>Meeting Minutes Tracker</h1>
             <h2>Project Kick-Off Day 2</h2>
             <h3>Date: April 10, 2024</h3>
             <b>Present Admin:</b>
-            <select name="cars" id="cars">
+            <select name="admins" id="admins">
                 <option value="shelby">Mr. Shelby</option>
                 <option value="cantaloupe">Mrs. Cantaloupe</option>
             </select>                  
@@ -27,47 +39,63 @@
     </nav>
     <hr>
     <main>
-        <!-- Attendance -->
-        <section>
-            <h1>Attendance</h1>
-            <form action="/attendance">
-                <fieldset>
-                  <legend>Attendance Submission:</legend>
-                  <label for="name-input">Name:</label>
-                  <input list="names" id="name-input" name="present">
-                    <datalist id="names">
-                        <option value="Al E. Gator">
-                        <option value="Alex Atienza">
-                        <option value="Brock Lee">
-                        <option value="Caesar Salad">
-                        <option value="Chip Munk">
-                        <option value="George Washington">
-                        <option value="Pepper Mint">
-                    </datalist>
-                  <input type="submit" value="Submit">
-                </fieldset>
-              </form>
-        </section>
+        <div class="block">
+            <!-- Attendance -->
+            <section>
+                <h1>Attendance</h1>
+                <form action="/attendance">
+                    <fieldset>
+                    <legend>Attendance Submission:</legend>
+                    <label for="name-input">Name:</label>
+                    <input list="names" id="name-input" name="present" required>
+                        <datalist id="names">
+                            <option value="Al E. Gator">
+                            <option value="Alex Atienza">
+                            <option value="Brock Lee">
+                            <option value="Caesar Salad">
+                            <option value="Chip Munk">
+                            <option value="George Washington">
+                            <option value="Pepper Mint">
+                        </datalist>
+                    <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div>
         <hr>
         <!-- Agenda -->
-        <section>
-            <h1>Agenda</h1>
-            <p>Today we continue our two-day <b>Project Kickoff</b> and start to wrap up<br>this preliminary phase before we transition to the serious stuff.</p>
-            <h2>What did we cover last meeting?</h2>
-            <ul>
-                <li>Kicked things off with a series of ice breakers to loosen everyone up</li>
-                <li>Decided on a team name</li>
-            </ul>
-            <h2>What will we cover this meeting?</h2>
-            <ol>
-                <li><strong>Assign</strong> specific roles to each team member</li>
-                <li><strong>Brainstorm</strong> a list of <strong>tasks</strong> that should be tackled</li>
-                <li><strong>Brainstorm</strong> potential <strong>Brainstorm</strong> ideas</li>
-            </ol>
-        </section>
+        <div class="gridContainer">
+            <div>
+                <h1>Agenda</h1>
+                <p style="line-height: 1em">Today we continue our two-day Project Kickoff and start to wrap up this preliminary phase before we transition to the serious stuff.
+                    I am typing a lot of text to test out the line height units. So don't mind me copy pasting this sentence. So don't mind me copy pasting this sentence.
+                    So don't mind me copy pasting this sentence. So don't mind me copy pasting this sentence. So don't mind me copy pasting this sentence.
+                    So don't mind me copy pasting this sentence. So don't mind me copy pasting this sentence. So don't mind me copy pasting this sentence.
+                </p>
+                <p style="line-height: 15px"> Now I am testing a different line height using px instead of em. So don't mind me copy pasting this sentence.
+                    So don't mind me copy pasting this sentence. So don't mind me copy pasting this sentence. So don't mind me copy pasting this sentence.
+                    So don't mind me copy pasting this sentence. So don't mind me copy pasting this sentence. So don't mind me copy pasting this sentence.
+                </p>
+            </div>
+            <div>
+                <h2>What did we cover last meeting?</h2>
+                <ul>
+                    <li>Kicked things off with a series of ice breakers to loosen everyone up</li>
+                    <li>Decided on a team name</li>
+                </ul>
+            </div>
+            <div>
+                <h2>What will we cover this meeting?</h2>
+                <ol>
+                    <li><strong>Assign</strong> specific roles to each team member</li>
+                    <li><strong>Brainstorm</strong> a list of <strong>tasks</strong> that should be tackled</li>
+                    <li><strong>Brainstorm</strong> potential <strong>Brainstorm</strong> ideas</li>
+                </ol>
+            </div>
+        </div>
         <hr>
         <!-- Questions, Comments, & Concerns -->
-        <section>
+        <section style="display:inline-block">
             <h1>Questions, Comments, & <em>Concerns</em></h1>
             <ul>
                 <li><i>We should chip in for catering for in person meetings</i></li>
@@ -85,10 +113,17 @@
         </section>
         <hr>
         <!-- Images -->
-        <section>
+        <section class="block-3">
             <h1>Product Ideas</h1>
-            <img src="media/peppermintdispenser.jpeg" alt="Peppermint Dispenser">
-            <img src="media/saladdispenser.jpeg" alt="Salad Dispenser">
+            <div class="imageContainer">
+                <img src="media/peppermintdispenser.jpeg" alt="Peppermint Dispenser">
+                <img src="media/saladdispenser.jpeg" alt="Salad Dispenser"
+                width="225"
+                height="225">
+                <img src="media/dryfooddispenser.jpeg" alt="Dry Food Dispenser"
+                width="225"
+                height="225">
+            </div>
             <details>
                 <summary>What are these images?</summary>
                 <p>We brainstormed making some type of dispenser like a peppermint dispenser or salad dispenser.</p>

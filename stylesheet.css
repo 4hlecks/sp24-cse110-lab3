@@ -121,3 +121,60 @@ input:required {
         font-size: 16px;
     }
 }
+
+#admins {
+    color: red;
+}
+
+* {
+    box-shadow: 1px 1px;
+}
+
+input[type="submit"] {
+    padding: 10px 15px;
+    background-color: rgb(220, 220, 220);
+}
+
+header,footer {
+    background-color: rgb(173, 173, 173);
+}
+
+.gridContainer p {
+    color: blue;
+}
+
+.gridContainer > p {
+    color: aqua;
+}
+
+h1 ~ h2 {
+    background-color: bisque;
+}
+
+h2 + h3 {
+    background-color: blueviolet;
+}
+
+.divPlaceholder {
+    background-color: aquamarine;
+}
+
+p.divPlaceholder {
+    color: rgb(80, 70, 70);
+    background-color: rgb(164, 170, 173);
+}
+
+.ulStyle {
+    color: darkblue;
+    &:hover {
+        color: darkcyan;
+    }
+}
+
+.liStyle {
+    color:cadetblue;
+}
+
+.ulStyle:has(li.liStyle) {
+    background-color: chartreuse;
+}
